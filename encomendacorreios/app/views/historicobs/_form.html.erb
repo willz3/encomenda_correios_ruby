@@ -1,0 +1,17 @@
+<%= form_with(model: historicob, local: true) do |form| %>
+  <% if historicob.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(historicob.errors.count, "error") %> prohibited this historicob from being saved:</h2>
+
+      <ul>
+      <% historicob.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

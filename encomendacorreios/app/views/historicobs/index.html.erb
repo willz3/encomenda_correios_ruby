@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Historicobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historicobs.each do |historicob| %>
+      <tr>
+        <td><%= link_to 'Show', historicob %></td>
+        <td><%= link_to 'Edit', edit_historicob_path(historicob) %></td>
+        <td><%= link_to 'Destroy', historicob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historicob', new_historicob_path %>

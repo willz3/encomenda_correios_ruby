@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Historicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th>Datahora</th>
+      <th>Situacao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @historicos.each do |historico| %>
+      <tr>
+        <td><%= historico.descricao %></td>
+        <td><%= historico.datahora %></td>
+        <td><%= historico.situacao %></td>
+        <td><%= link_to 'Show', historico %></td>
+        <td><%= link_to 'Edit', edit_historico_path(historico) %></td>
+        <td><%= link_to 'Destroy', historico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Historico', new_historico_path %>

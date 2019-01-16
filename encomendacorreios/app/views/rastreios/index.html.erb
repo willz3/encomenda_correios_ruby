@@ -1,0 +1,25 @@
+<h1>Gambirreios listagem</h1>
+
+
+<form>
+<table>
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <% @encomendas.each do |e|%>
+            <td><%= e.codigo %></td>
+            <td><%= e.nome %> </td>
+            <td><a href="/rastreios/historico/<%= e.codigo %>">Histórico</a></td>
+            <% end %>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+</form>
